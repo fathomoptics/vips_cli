@@ -19,7 +19,7 @@ module.exports.vipsheader = function(file) {
                     (error, stdout, stderr) =>
                     {
                       if(error) {
-                        reject(error + "\n\n" + stderr);
+                        reject(error);
                       }
 
                       var a = stdout.split("\n");
