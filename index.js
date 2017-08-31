@@ -1,3 +1,4 @@
+/* jslint esversion: 6 */
 var execFile = require("child_process").execFile;
 
 module.exports.vips = function(...args) {
@@ -5,11 +6,9 @@ module.exports.vips = function(...args) {
     return execFile('vips', args,
                     (error, stdout, stderr) =>
                     {
-                      if(error) {
-                        reject(error + "\n\n" + stderr);
-                      }
+                      if(error) reject(error + "\n\n" + stderr);
                       resolve(stdout);
-                    })
+                    });
   });
 };
 
@@ -18,9 +17,7 @@ module.exports.vipsheader = function(file) {
     return execFile('vipsheader', ['-a', file],
                     (error, stdout, stderr) =>
                     {
-                      if(error) {
-                        reject(error);
-                      }
+                      if(error) reject(error);
 
                       var a = stdout.split("\n");
                       a.pop();
@@ -37,6 +34,6 @@ module.exports.vipsheader = function(file) {
                         a[i] = k.join(":");
                       });
                       resolve(JSON.parse("{"+a.join(",\n")+"}"));
-                    })
+                    });
   });
 };

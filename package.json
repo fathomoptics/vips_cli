@@ -1,0 +1,32 @@
+{
+  "name": "vips_cli",
+  "version": "0.1.0",
+  "description": "Run vips commands using the vips command line program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tombaran/lumii-three-api.git"
+  },
+  "keywords": [
+    "vips"
+  ],
+  "author": "matt@lumiidisplay.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tombaran/lumii-three-api/issues"
+  },
+  "homepage": "http://www.lumiidisplay.com",
+  "dependencies" : {
+  },
+  "private": true,
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "jshint *.js"
+  }
+}
+
