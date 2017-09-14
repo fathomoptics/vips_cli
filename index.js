@@ -12,6 +12,10 @@ module.exports.vips = function(...args) {
   });
 };
 
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 module.exports.vipsheader = function(file) {
   return new Promise( (resolve, reject) => {
     return execFile('vipsheader', ['-a', file],
@@ -31,6 +35,9 @@ module.exports.vipsheader = function(file) {
                         if(u) k[1] = k[1].split(",").shift(); // remove stuff after the ,
                         if(t) k[1] = k[1].split("-").shift(); // remove stuff after the -
                         if(s) k[1] = "\""+k[1].substring(1,k[1].length)+"\"";
+                        k[1] = k[1].trim();
+                        if(!isNumeric(k[1]) && k[1][0] !== '"')
+                          k[1]='"'+k[1]+'"';
                         a[i] = k.join(":");
                       });
                       resolve(JSON.parse("{"+a.join(",\n")+"}"));
