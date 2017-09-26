@@ -30,10 +30,8 @@ module.exports.vipsheader = function(file) {
                         var k = e.split(':');
                         var s = (k[0] === "vips-loader" || k[0] === "xml-header"); // make vips-loader a string
                         var t = (k[0] === "format" || k[0] === "coding" || k[0] === "interpretation"); 
-                        var u = k[0] === "xml-header";
                         k[0] = "\""+k[0]+"\"";
-                        if(u) k[1] = k[1].split(",").shift(); // remove stuff after the ,
-                        if(t) k[1] = k[1].split("-").shift(); // remove stuff after the -
+                        if(t) k[1] = k[1].split("-").pop(); // remove stuff before the -
                         if(s) k[1] = "\""+k[1].substring(1,k[1].length)+"\"";
                         k[1] = k[1].trim();
                         if(!isNumeric(k[1]) && k[1][0] !== '"')
