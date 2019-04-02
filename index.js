@@ -1,5 +1,5 @@
 /* jslint esversion: 6 */
-var execFile = require("child_process").execFile;
+const execFile = require('child_process').execFile;
 
 module.exports.vips = function(...args) {
   return new Promise( (resolve, reject) => {
