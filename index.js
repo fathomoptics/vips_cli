@@ -6,7 +6,10 @@ module.exports.vips = function(...args) {
     return execFile('vips', args,
                     (error, stdout, stderr) =>
                     {
-                      if(error) reject(error + "\n\n" + stderr);
+                      if(error) {
+                        var e = new Error(error + '\n\n' + stderr);
+                        reject(e);
+		      }
                       resolve(stdout);
                     });
   });
@@ -21,7 +24,7 @@ module.exports.vipsheader = function(file) {
     return execFile('vipsheader', ['-a', file],
                     (error, stdout, stderr) =>
                     {
-                      if(error) reject(error);
+                      if(error) reject(new Error(error));
 
                       var a = stdout.split("\n");
                       a.pop();
