@@ -32,7 +32,7 @@ module.exports.vipsheader = function(file) {
                       a.forEach( (e,i,a) => {
                         var k = e.split(':');
                         var s = (k[0] === "vips-loader" || k[0] === "xml-header"); // make vips-loader a string
-                        var t = (k[0] === "format" || k[0] === "coding" || k[0] === "interpretation"); 
+                        var t = (k[0] === "format" || k[0] === "coding" || k[0] === "interpretation");
                         k[0] = "\""+k[0]+"\"";
                         if(t) k[1] = k[1].split("-").pop(); // remove stuff before the -
                         if(s) k[1] = "\""+k[1].substring(1,k[1].length)+"\"";
