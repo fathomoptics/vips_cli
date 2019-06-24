@@ -1,4 +1,4 @@
-/* jslint esversion: 6 */
+/* jslint esversion: 8 */
 const util = require('util');
 const execFile = util.promisify(require('child_process').execFile);
 
