@@ -1,5 +1,5 @@
 {
-  "name": "vips_cli",
+  "name": "vips-cli",
   "version": "0.1.0",
   "description": "Run vips commands using the vips command line program",
   "main": "index.js",
@@ -19,9 +19,6 @@
     "url": "https://github.com/tombaran/lumii-three-api/issues"
   },
   "homepage": "http://www.lumiidisplay.com",
-  "dependencies": {
-    "package.json": "^2.0.1"
-  },
   "private": true,
   "files": [
     "index.js"
