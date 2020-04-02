@@ -1,5 +1,5 @@
 {
-  "name": "@lumiidisplay/vips-cli",
+  "name": "@lumii/vips-cli",
   "version": "0.1.0",
   "description": "Run vips commands using the vips command line program",
   "main": "index.js",
