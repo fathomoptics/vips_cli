@@ -1,5 +1,5 @@
 {
-  "name": "@lumii/vips-cli",
+  "name": "@fathomoptics/vips-cli",
   "version": "0.1.0",
   "description": "Run vips commands using the vips command line program",
   "main": "index.js",
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lumiidisplay/vips_cli.git"
+    "url": "git+ssh://git@github.com/fathomoptics/vips_cli.git"
   },
   "keywords": [
     "vips"
   ],
-  "author": "matt@lumiidisplay.com",
+  "author": "matt@fathomoptics.com",
   "license": "LGPL",
   "bugs": {
-    "url": "https://github.com/lumiidisplay/vips_cli/issues"
+    "url": "https://github.com/fathomoptics/vips_cli/issues"
   },
-  "homepage": "http://www.lumiidisplay.com",
+  "homepage": "http://www.fathomoptics.com",
   "files": [
     "index.js"
   ]
