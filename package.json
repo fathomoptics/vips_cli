@@ -1,6 +1,6 @@
 {
   "name": "@fathomoptics/vips-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run vips commands using the vips command line program",
   "main": "index.js",
   "scripts": {
